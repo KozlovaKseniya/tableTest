@@ -107,11 +107,11 @@ async function loadData() {
  */
 function createTableLayout(rows) {
   /**
-   * Функция длм создания разметки строки
+   * Функция для создания разметки строки
    * @param {TableItem} row
    * @returns строка с HTML-разметкой
    */
-  function createTableRowLayout(row) {
+  const createTableRowLayout = (row) => {
     return `
       <tr>
 		    <td>${row.Name}</td>
@@ -124,7 +124,7 @@ function createTableLayout(rows) {
         </td>
 	    </tr>
     `;
-  }
+  };
   let rowsLayout = "";
   rows.forEach((row) => {
     rowsLayout += createTableRowLayout(row);
